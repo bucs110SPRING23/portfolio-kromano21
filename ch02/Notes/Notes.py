@@ -33,8 +33,8 @@ print(mylist[-2])
 
 #can break a list across multiple lines 
 mycolors = [
-    "red"
-    "green"
+    "red",
+    "green",
     "blue"
 ]
 
@@ -48,3 +48,11 @@ mycolors.append("yellow")
 print(mycolors)
 #delete color
 del mycolors[2]
+
+var = 4
+print(str(var)+ " is a number")
+print(float(var) " is a number")
+
+var = 4.0
+float(var)
+int(var) #error
