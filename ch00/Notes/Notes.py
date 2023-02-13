@@ -98,3 +98,57 @@ var = input("please input a value:")
 #Shorter Form of Casting from input
 var = int(input("pick a number:"))
 
+sides = int(sides)
+#casting string to integer
+
+#External Modules
+#Website Py.Py
+#Free to download, often use
+pygame
+pygame-Menu 
+# Framework - collection of modules, large libraries. Bunch of stuff to use, not a program itself. 
+
+#Top of the File
+import pygame
+
+pygame.init()
+#sets everything up, use before doing anything with pygame 
+
+screen = pygame.display.set_mode()
+#left blank, full screen
+#(300, 300) - 300 by 300 window
+#screen: variable
+#pygame: modules that contain modules are called frameworks
+#display: Submodule of pygame
+#set_mode: Function of the display submodule 
+
+screen.fill("red")
+pygame.time.wait(2000)
+pygame.display.flip()
+screen.fill("blue")
+pygame.time.wait(2000)
+pygame.display.flip()
+screen.fill("green")
+pygame.time.wait(2000)
+pygame.display.flip()
+#won't display until you tell it to 
+#flip - less problems but could be laggier than pygame.display.update()
+#ideally want to wait after you flip so you can view the color after changing the image
+pygame.time
+#pygame module for monitoring time 
+pygame.draw
+#pygame module for drawing 
+pygame.draw.rect(screen, "pink",[10, 10, 100, 100])
+#dimensions = [x, y, width, height]
+pygame.display.flip()
+pygame.time.wait(5000)
+#in graphic programming, y is inverted (increases downward)
+#negative coordinates are always offscreen
+#can list dimesnsions such as 
+dimensions = [10, 10, 20, 30]
+#and then...
+pygame.draw.rect(screen, "pink", dimensions)
+#Exercise: drawing with pygame
+screen_size = screen.get_size()
+dimensions = [screen_size[0] / 2, screen_size[1] / 2, 250, 250]
+
