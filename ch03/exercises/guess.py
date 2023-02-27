@@ -1,5 +1,5 @@
 import random
-number = random.randrange(1, 11)
+number = random.randrange(1, 1000)
 guess = int(input("Guess a number from one to ten: "))
 if number == guess:
     print("Correct!")
