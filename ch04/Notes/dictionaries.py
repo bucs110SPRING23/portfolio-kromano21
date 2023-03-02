@@ -38,7 +38,7 @@ contacts["Leia"] = "568-9970"
 contacts["Han"] = "645-7897"
 
 contacts["Han"] = ""
-}
+
 #If key exists: update value
 #If key does not exist: insert key/value 
 #.items()
