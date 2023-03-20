@@ -28,7 +28,7 @@ def threenp1range(upper_limit):
     return objs_in_sequence
 
 def main():
-    result = threenp1range(8)
+    result = threenp1range(20)
     print(result)
     graph_coordinates(result)
 
@@ -38,21 +38,19 @@ def graph_coordinates(d):
     screen = pygame.display.set_mode()
     max_so_far = [0]
     for k, v in d.items():
+        pygame.draw.line(screen, "red", startpoint, (k, v))
+        startpoint = (k, v)
+    for k, v in d.items():
         if v > max_so_far:
             max_so_far.clear()
             max_so_far.append(v)
-    for k, v in d.items():
-        pygame.draw.line(screen, "red", startpoint, (k, v))
-        startpoint = (k, v)
-    newdisplay = pygame.transform.flip(screen, False, True)
-    width, height = newdisplay.get_size()
-    newwidth = width * 5
-    newheight = height * 5
-    newdisplay = pygame.transform.scale(newdisplay, (newwidth, newheight))
-    screen.blit(newdisplay, (0,0))
+    width, height = screen.get_size()
+    newdisplay = pygame.transform.scale(screen, (width * 5, height * 5))
+    newdisplay = pygame.transform.flip(newdisplay, False, True)
+    screen.blit(newdisplay, (0, 0))
     font = pygame.font.Font(None, 48)
     message = str(max_so_far)
-    msg = font.render("The max is" + message, True, "blue")
+    msg = font.render("The max is" + message + "iterations!", True, "blue")
     screen.blit(msg, (10, 10))
     pygame.display.flip()
     pygame.time.wait(5000)
