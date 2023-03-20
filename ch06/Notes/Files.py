@@ -31,3 +31,23 @@ for i in ideas:
 
 main()
 
+
+""" file_contents = open("assets/ideas.txt", "r") #modes: 'r', 'w', 'a'
+file_contents = file_pointer.read() #entire file in a single string """
+file_contents = file_pointer.readline() #first line as a string 
+file_contents = file_pointer.readline() #second line as a string
+for line in file_pointer:
+    print(line)
+
+#Gets lines as in a list
+
+#File Streams - one way 
+file_contents = open("assets/ideas.txt", "r") #modes: 'r', 'w', 'a'
+#'w' - deletes any existing file (truncates)
+file_pointer.write("Hello World") #Does not add the newline <enter> like print 
+file_pointer.write("/n") #space, backlash
+file_pointer.close() #always close files when writing
+
+#'a' = appends to the file 
+file_pointer = open("assets/ideas.txt", 'a')
+var = 5/0

@@ -38,13 +38,13 @@ def graph_coordinates(d):
     screen = pygame.display.set_mode()
     max_so_far = 0
     for k, v in d.items():
-        pygame.draw.line(screen, "red", startpoint, (k, v))
-        startpoint = (k, v)
+        pygame.draw.line(screen, "red", startpoint, (k * 20, v * 20))
+        startpoint = (k * 20 , v * 20)
     for k, v in d.items():
         if v > max_so_far:
             max_so_far = v
     width, height = screen.get_size()
-    newdisplay = pygame.transform.scale(screen, (width * 5, height * 5))
+    newdisplay = pygame.transform.scale(screen, (width , height))
     newdisplay = pygame.transform.flip(newdisplay, False, True)
     screen.blit(newdisplay, (0, 0))
     font = pygame.font.Font(None, 48)
