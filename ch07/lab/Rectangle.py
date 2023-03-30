@@ -4,7 +4,6 @@ class Rectangle:
         self.ycor = abs(y)
         self.height = abs(h)
         self.width = abs(w)
-        return self.xcor, self.ycor, self.height, self.width
     def __str__(self):
-        return "x:", self.xcor, self.ycor, 
-    
+        result = "(x:" + self.xcor + " y:" + self.ycor + ") " + "width:" + self.width + "height:" + self.height
+        return result
