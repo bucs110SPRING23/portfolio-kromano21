@@ -17,10 +17,15 @@ class Pipe:
       args: pnum [int] the pipe's id number
     """
     self.pipe_number = pnum
-    self.open = True #Pipes start without Mario in them
+    self.open = True #Pipes start open without Mario in them
     self.is_small = True #Pipes start small
-   
 
-
-
-
+class MysteryBox:
+  def __init__(self, output = "gold coin"):
+    """
+    Initialize the MysteryBox Object
+    args: output [str] name of the item that box outputs when hit
+    """
+    self.open = False #Boxes are not opened until Mario hits them
+    self.is_small = True #Mystery Boxes smart small and must be opened by Mario
+    self.boxoutput = output #Default output is a gold coin 
