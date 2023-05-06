@@ -40,16 +40,19 @@ class StringUtility:
     
     def cipher(self):
         result = ""
-        for letter in self.string:
-            if letter.isalpha():
-                if letter.islower():
-                    result += chr((ord(letter) - 97 + 3) % 26 + 97)
+        shift_amount = len(self.string)
+        for s in self.string:
+            if s.isalpha():
+                if s.isupper():
+                    base = ord('A')
                 else:
-                    result += chr((ord(letter) - 65 + 3) % 26 + 65)
+                    base = ord('a')
+                shift = (ord(s) - base + shift_amount) % 26 + base
+                result += chr(shift)
             else:
-                result += letter
+                result += s
+        
         return result
-    
 
         
     
