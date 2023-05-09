@@ -1,5 +1,5 @@
-from monsterhunterapi import MonterHunterAPI
-from dogfacts import DogFacts
+from monster_hunter_api import MonterHunterAPI
+from dog_facts import DogFacts
 
 def main():
     weakness_finder = MonterHunterAPI()
