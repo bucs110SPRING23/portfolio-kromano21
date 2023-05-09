@@ -1,6 +1,6 @@
 # CS110 Final Exam
 
-## This program pulls data from an API based off the game Monster Hunter World and an API for random dog facts. The user provides a monster in the game that they would like to learn the weaknesses of and the weaknesses printed. If the monster the user selects is a "cool" monster then a dog fact is also printed to the user. 
+## This program pulls data from an API based off the game Monster Hunter World and an API for random dog facts. The user provides a monster in the game that they would like to learn the weaknesses of and the weaknesses are printed. If the monster the user selects is a "cool" monster then a dog fact is also printed to the user. 
 
 ## NA
 
